@@ -1,0 +1,10 @@
+cmake_minimum_required (VERSION 2.6)
+project (cpp-express)
+
+add_executable(main main.cpp)
+target_link_libraries(main routers)
+target_link_libraries(main -lproxygenhttpserver)
+target_link_libraries(main -lfolly)
+target_link_libraries(main -ldouble-conversion)
+target_link_libraries(main -lglog)
+target_link_libraries(main -lgflags)

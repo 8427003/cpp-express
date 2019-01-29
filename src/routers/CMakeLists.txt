@@ -1,0 +1,10 @@
+cmake_minimum_required (VERSION 2.6)
+aux_source_directory(. ALL_ROUTERS)
+
+add_library (routers ${ALL_ROUTERS})
+target_link_libraries(routers controllers)
+target_link_libraries(routers -lproxygenhttpserver)
+target_link_libraries(routers -lfolly)
+target_link_libraries(routers -ldouble-conversion)
+target_link_libraries(routers -lglog)
+target_link_libraries(routers -lgflags)
